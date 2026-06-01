@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 6 - Artykuły</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+
+  <main class="max-w-3xl mx-auto">
+
+    <h1 class="text-3xl font-bold mb-6">
+      Lista artykułów
+    </h1>
+
+    <section id="articles" class="space-y-4 mb-10"></section>
+
+    <h2 class="text-2xl font-bold mb-4">
+      Dodaj nowy artykuł
+    </h2>
+
+    <form id="articleForm" class="bg-white p-6 rounded shadow space-y-4">
+
+      <input
+        id="title"
+        class="w-full border p-2 rounded"
+        placeholder="Tytuł"
+        required
+      >
+
+      <input
+        id="subtitle"
+        class="w-full border p-2 rounded"
+        placeholder="Podtytuł"
+        required
+      >
+
+      <input
+        id="author"
+        class="w-full border p-2 rounded"
+        placeholder="Autor"
+        required
+      >
+
+      <textarea
+        id="content"
+        class="w-full border p-2 rounded"
+        placeholder="Treść artykułu"
+        required
+      ></textarea>
+
+      <button
+        class="bg-blue-600 text-white px-4 py-2 rounded"
+        type="submit"
+      >
+        Dodaj artykuł
+      </button>
+
+    </form>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
