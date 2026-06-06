@@ -123,3 +123,4 @@ form.addEventListener("submit", async function(event) {
 sortSelect.addEventListener("change", getArticles);
 
 getArticles();
+
