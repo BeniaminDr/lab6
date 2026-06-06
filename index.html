@@ -2,25 +2,28 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lab 6 - Artykuły</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
 </head>
 <body class="bg-gray-100 p-8">
-
   <main class="max-w-3xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6">Lista artykułów</h1>
 
-    <h1 class="text-3xl font-bold mb-6">
-      Lista artykułów
-    </h1>
+    <label for="sort" class="block mb-2 font-semibold">Sortowanie</label>
+    <select id="sort" class="w-full border p-2 rounded mb-6 bg-white">
+      <option value="created_at.desc">po dacie malejąco</option>
+      <option value="created_at.asc">po dacie rosnąco</option>
+      <option value="title.asc">po nazwie alfabetycznie</option>
+    </select>
 
     <section id="articles" class="space-y-4 mb-10"></section>
 
-    <h2 class="text-2xl font-bold mb-4">
-      Dodaj nowy artykuł
-    </h2>
+    <h2 class="text-2xl font-bold mb-4">Dodaj nowy artykuł</h2>
 
     <form id="articleForm" class="bg-white p-6 rounded shadow space-y-4">
-
       <input
         id="title"
         class="w-full border p-2 rounded"
@@ -42,6 +45,12 @@
         required
       >
 
+      <input
+        id="created_at"
+        type="datetime-local"
+        class="w-full border p-2 rounded"
+      >
+
       <textarea
         id="content"
         class="w-full border p-2 rounded"
@@ -50,14 +59,15 @@
       ></textarea>
 
       <button
-        class="bg-blue-600 text-white px-4 py-2 rounded"
+        id="submitButton"
+        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
         type="submit"
       >
         Dodaj artykuł
       </button>
 
+      <p id="message" class="text-sm"></p>
     </form>
-
   </main>
 
   <script src="script.js"></script>
